@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/Student_Performance_DT - Student_Performance_DT.csv
+      hash: md5
+      md5: df347b577210a989ebb8b3c99c9b7df5
+      size: 17489
+    - path: src/train.py
+      hash: md5
+      md5: 46913917b92742864ecfa3a4192643fa
+      size: 2635
+    outs:
+    - path: models/student_performance_model.pkl
+      hash: md5
+      md5: 65350031450a7b9936ca78373c9d5a4e
+      size: 1195954
+    - path: reports/metrics.json
+      hash: md5
+      md5: 97710a8713313dfa09f1dee79120904e
+      size: 100

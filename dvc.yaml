@@ -1,0 +1,11 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/Student_Performance_DT - Student_Performance_DT.csv
+    - src/train.py
+    outs:
+    - models/student_performance_model.pkl
+    metrics:
+    - reports/metrics.json:
+        cache: false
